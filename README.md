@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WhatsApp Business Automation Landing Page
 
-## Getting Started
+A modern, responsive landing page for WhatsApp Business automation services, available in both English and Portuguese.
 
-First, run the development server:
+## 🌟 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Automatic language detection and redirection
+- Bilingual support (English and Portuguese)
+- Responsive design
+- Modern UI with WhatsApp-style chat interface
+- Contact form integration with FormSubmit
+- Social media and contact information
+- Optimized for all devices
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📄 Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `index.html` - Entry point with automatic language detection
+- `index-pt.html` - Portuguese version
+- `index-en.html` - English version
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔤 Language Detection
 
-## Learn More
+The website automatically detects the user's preferred language:
+- If the browser's language is set to Portuguese (starts with "pt"), users are redirected to the Portuguese version
+- For all other languages, users are redirected to the English version
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Technologies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- HTML5
+- CSS3
+- Font Awesome Icons
+- FormSubmit for form handling
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Setup
 
-## Deploy on Vercel
+1. Clone the repository
+2. No build process required - pure HTML and CSS
+3. Deploy to any static hosting service
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📱 Features Highlighted
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- WhatsApp chatbot automation
+- Appointment scheduling via Calendly and Google Calendar
+- Data storage integration with Google Sheets
+- 24/7 automated customer support
+
+## 🎨 Design
+
+The landing page features:
+- Clean and modern design
+- WhatsApp-inspired chat interface
+- Responsive layout for all screen sizes
+- Optimized visual hierarchy
+
+## 📬 Contact Form
+
+The contact form is powered by FormSubmit and collects:
+- Name
+- Email
+- WhatsApp number
+
+## 🌐 Languages
+
+### Portuguese Version (index.html)
+- Primary landing page
+- Brazilian Portuguese content
+- Culturally adapted messaging
+
+### English Version (index-en.html)
+- International landing page
+- English content
+- Globally oriented messaging
+
+## 👨‍💻 Developer
+
+Vitor Chagas
+- WhatsApp: +31 (06) 1038 5577
+- Email: vitorvieirachagas@gmail.com
+- LinkedIn: [Vitor Chagas](https://www.linkedin.com/in/vitorvchagas/)
+
+## 📝 License
+
+This project is open source and available under the MIT License. 
