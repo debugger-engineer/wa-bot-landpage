@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  landpage:
+    image: nginx:alpine
+    networks:
+      - VIAnalyticsNet
+    volumes:
+      - /opt/wa-bot-landpage:/usr/share/nginx/html:ro
+      - /opt/wa-bot-landpage/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.wa-bot.rule=Host(`whatsapp.vianalytics.com`)"
+      - "traefik.http.routers.wa-bot.entrypoints=websecure"  # Handles HTTPS
+      - "traefik.http.routers.wa-bot.tls.certresolver=myresolver"  # Let's Encrypt SSL
+      - "traefik.http.services.wa-bot.loadbalancer.server.port=80"
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+
+networks:
+  VIAnalyticsNet:
+    external: true
