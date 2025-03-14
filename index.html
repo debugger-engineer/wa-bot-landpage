@@ -1,1 +1,16 @@
- 
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Redirect</title>
+    <script>
+        // Redirect based on browser language (pt or en fallback)
+        var userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        window.location.href = userLang.startsWith('pt') ? 'index-pt.html' : 'index-en.html';
+    </script>
+    <!-- Fallback meta refresh to English version if JavaScript is disabled -->
+    <meta http-equiv="refresh" content="0; url=index-en.html">
+</head>
+<body>
+</body>
+</html> 

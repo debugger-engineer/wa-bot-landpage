@@ -3,8 +3,9 @@ version: "3.8"
 services:
   landpage:
     image: nginx:latest
-    container_name: nginx_landpage
-    restart: always
+    deploy:
+      mode: replicated
+      replicas: 1
     volumes:
       - ./:/usr/share/nginx/html
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
