@@ -6,17 +6,17 @@ services:
     deploy:
       mode: replicated
       replicas: 1
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.landpage.rule=Host(`whatsapp.vianalytics.tech`)"
+        - "traefik.http.routers.landpage.entrypoints=websecure"
+        - "traefik.http.routers.landpage.tls.certresolver=letsencrypt"
+        - "traefik.http.services.landpage.loadbalancer.server.port=80"
     volumes:
       - ./:/usr/share/nginx/html
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
     networks:
       - VIAnalyticsNet
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.landpage.rule=Host(`whatsapp.vianalytics.tech`)"
-      - "traefik.http.routers.landpage.entrypoints=websecure"
-      - "traefik.http.routers.landpage.tls.certresolver=letsencrypt"
-      - "traefik.http.services.landpage.loadbalancer.server.port=80"
 
 networks:
   VIAnalyticsNet:
