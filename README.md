@@ -2,6 +2,8 @@
 
 A simple, responsive landing page for WhatsApp Business automation services, available in English and Portuguese.
 
+🌐 **Live URL**: [https://whatsapp.vianalytics.tech](https://whatsapp.vianalytics.tech)
+
 ## 🌟 Features
 
 - Automatic language detection (English & Portuguese)
